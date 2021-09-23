@@ -1,0 +1,191 @@
+* {
+  /* 'Resetando' a estilização padrão */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+
+  --purple: #7A4DBF;
+  --light-purple: #906ACB;
+  --white: #F0E6FF;
+  --light-blue: #B6EFDA;
+}
+
+html {
+  /* Convertendo 1rem = 16px
+  para 1rem = 10px */
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+strong {
+  font-weight: 700;
+}
+
+header {
+  background: var(--purple);
+}
+
+
+header img {
+  display: block;
+  height: fit-content;
+  
+  margin: auto;
+  padding: 1rem;
+
+}
+
+.bg-logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.invite, .objective, .gift, .doubts {
+  padding: 2rem 8rem;
+}
+
+.invite {
+  color: #fff;
+  background: var(--purple);
+}
+
+.invite::before {
+  content: '';
+  display: block;
+  position: relative;
+
+  top: -35px;
+
+  width: 100%;
+  height: 1px;
+
+  margin: 0 auto;
+
+  background-color: #fff;
+}
+
+.offer{
+  display: flex;
+  
+  margin-bottom: 2rem;
+}
+
+.offer p {
+  
+  margin: auto 0;
+  
+  color: rgba(0,0,0, 0.8);
+  padding: 2rem 8rem 2rem 3rem ;
+}
+
+.testimonial {
+  text-align: center;
+  color: rgba(0,0,0, 0.8);
+
+}
+
+.testimonial p, .testimonial img {
+  margin-bottom: 2rem;
+}
+
+.objective {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 8rem;
+
+  color: #fff;
+  background: var(--purple);
+
+  text-align: justify;
+}
+
+.gift {
+  text-align: center;
+
+  color: rgba(0,0,0, 0.8);
+  background: var(--light-blue);
+}
+
+.doubts {
+  text-align: center;
+
+  color: rgba(0,0,0, 0.8);
+  background: var(--white);
+}
+
+a {
+  display: block;
+  border-radius: 2rem;
+
+  width: 12rem;
+  
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+
+  font-weight: 700;
+  color: #fff;
+  background: var(--light-purple);
+
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  height: 45px;
+
+  padding: 0 1rem;
+
+  align-items: center;
+  justify-content: center;
+  
+  background: #fff; 
+}
+
+footer p {
+  text-align: center;
+  color: rgba(0,0,0, 0.8);
+
+}
+
+@media (max-width: 800px) {
+  .invite, .offer p, .objective, .gift, .doubts {
+    padding: 2rem 3rem;
+  }
+
+  .objective p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .offer, .objective {
+    flex-wrap: wrap;
+  }
+
+  .offer p {
+    padding: 2rem 3rem 0 3rem;
+  }
+
+  .testimonial p {
+    padding: 0 3rem;
+  }
+
+  .testimonial img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .objective p{
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
